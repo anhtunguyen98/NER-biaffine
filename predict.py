@@ -78,9 +78,9 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser()
 
     # dataset
-    parser.add_argument('--char_vocab_path', default='/workspace/vinbrain/tunguyen/NLP/NER-biaffine/data/charindex.json', type=str)
-    parser.add_argument('--label_set_path', default='/workspace/vinbrain/tunguyen/NLP/NER-biaffine/data/ner_covid19/label_set.txt', type=str)
-    parser.add_argument('--model_name_or_path', default='/workspace/vinbrain/tunguyen/NLP/pretrained_bert/phobert-base', type=str)
+    parser.add_argument('--char_vocab_path', default='data/charindex.json', type=str)
+    parser.add_argument('--label_set_path', default='data/ner_covid19/label_set.txt', type=str)
+    parser.add_argument('--model_name_or_path', default='vinai/phobert-base', type=str)
 
     parser.add_argument('--max_char_len',default = 15, type=int)
     parser.add_argument('--use_char',default=False, type = bool)

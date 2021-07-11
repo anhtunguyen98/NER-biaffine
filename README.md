@@ -3,7 +3,7 @@ Pytorch implementation of Analyzing Vietnamese Legal Question using Deep Neural 
 ## Model Architecture
 
 <p float="left" align="center">
-    <img width="600" src="" />  
+    <img width="600" src="https://user-images.githubusercontent.com/36925677/125171012-19fd0880-e1dc-11eb-9f6b-ec3193019b95.png" />  
 </p>
 
 

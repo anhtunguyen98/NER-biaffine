@@ -45,13 +45,9 @@ class Trainer(object):
             eps=self.args.adam_epsilon
         )
 
-        if self.args.warmup_steps != 0:
-            num_warmup_steps = total_steps // 10
-        else:
-            num_warmup_steps = 0
         scheduler = get_linear_schedule_with_warmup(
             optimizer,
-            num_warmup_steps=num_warmup_steps,
+            num_warmup_steps=self.args.warmup_steps,
             num_training_steps=total_steps
         )
         loss_func = torch.nn.CrossEntropyLoss(reduction='mean')

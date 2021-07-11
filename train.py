@@ -35,18 +35,17 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     # dataset
-    parser.add_argument('--flat_ner', default=True, type=bool)
-    parser.add_argument('--train_path', default='/workspace/vinbrain/tunguyen/NLP/NER-biaffine/data/ner_covid19/train.json', type=str)
-    parser.add_argument('--dev_path', default='/workspace/vinbrain/tunguyen/NLP/NER-biaffine/data/ner_covid19/test.json', type=str)
-    parser.add_argument('--test_path', default='/workspace/vinbrain/tunguyen/NLP/NER-biaffine/data/ner_covid19/test.json', type=str)
-    parser.add_argument('--char_vocab_path', default='/workspace/vinbrain/tunguyen/NLP/NER-biaffine/data/charindex.json', type=str)
-    parser.add_argument('--label_set_path', default='/workspace/vinbrain/tunguyen/NLP/NER-biaffine/data/ner_covid19/label_set.txt', type=str)
+    parser.add_argument('--train_path',  type=str)
+    parser.add_argument('--dev_path',  type=str)
+    parser.add_argument('--test_path', type=str)
+    parser.add_argument('--char_vocab_path', type=str)
+    parser.add_argument('--label_set_path', type=str)
     parser.add_argument('--max_char_len', default=10, type=int)
     parser.add_argument('--max_seq_length', default=200, type=int)
     parser.add_argument('--batch_size', default=32, type=int)
 
     # model
-    parser.add_argument('--use_char', default=False, type=bool)
+    parser.add_argument('--use_char', action="store_true")
     parser.add_argument('--char_embedding_dim', default=100, type=int)
     parser.add_argument('--char_hidden_dim', default=200, type=int)
     parser.add_argument('--num_layer_bert', default=1, type=int)
@@ -54,7 +53,7 @@ if __name__ == '__main__':
     parser.add_argument('--hidden_dim', default=728, type=int)
     parser.add_argument('--hidden_dim_ffw', default=400, type=int)
     parser.add_argument('--num_labels', default=12, type=int)
-    parser.add_argument('--model_name_or_path', default='/workspace/vinbrain/tunguyen/NLP/pretrained_bert/phobert-base', type=str)
+    parser.add_argument('--model_name_or_path', type=str)
 
     # train
     parser.add_argument('--num_epochs', default=30, type=int)
@@ -63,8 +62,8 @@ if __name__ == '__main__':
     parser.add_argument('--weight_decay', default=0.01, type=float)
     parser.add_argument('--warmup_steps', default=0, type=int)
     parser.add_argument('--max_grad_norm', default=1, type=int)
-    parser.add_argument('--do_train', default=True, type=bool)
-    parser.add_argument('--do_eval', default=True, type=bool)
+    parser.add_argument('--do_train',action="store_true")
+    parser.add_argument('--do_eval',action="store_true")
 
     parser.add_argument('--save_folder', default='results', type=str)
     args, unk = parser.parse_known_args()

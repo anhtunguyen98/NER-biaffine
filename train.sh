@@ -47,5 +47,5 @@ python train.py --train_path $TRAIN_PATH \
                 --char_vocab_path $CHAR_VOCAB_PATH \
                 --label_set_path $LABEL_SET_PATH \
                 --do_eval \
-                 --do_train \
+                --do_train \
 #                 --use_char \

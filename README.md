@@ -18,7 +18,7 @@ Pytorch implementation of Analyzing Vietnamese Legal Question using Deep Neural 
 ## Training & Evaluation
 
 ```bash
-git clone https://github.com/natcs98/NER-biaffine.git
+git clone https://github.com/anhtunguyen98/NER-biaffine.git
 cd NER-biaffine
 pip install -r requirements.txt
 bash train.sh
